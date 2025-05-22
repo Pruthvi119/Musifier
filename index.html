@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Musifier</title>
+    <link rel="icon" type="favicon" href="/favicon-32x32.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1f1c2c, #928dab);
+            color: #fff;
+        }
+
+        header {
+            background: #2e2a47;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        header form input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 300px;
+        }
+
+        header form input[type="submit"] {
+            padding: 8px 15px;
+            margin-left: 5px;
+            background: #ff5eaa;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        header form input[type="submit"]:hover {
+            background: #ff3c9e;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff91ca;
+        }
+
+        .content-section {
+            padding: 30px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .song, .album {
+            background: #3c375c;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .song:hover, .album:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.6);
+        }
+
+        .album img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffd6f5;
+        }
+
+        footer {
+            background: #2e2a47;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img src="images/Logo.png" alt="Musifier Logo"></a>
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search here..." autocomplete="off">
+            <input type="submit" value="Search">
+        </form>
+        <nav>
+            <a href="About us.html">About Us</a>
+            <a href="Contact us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="content-section">
+        <h2>Top Songs</h2>
+        <div class="flex-container">
+            <div class="song">
+                <h3>Jhol - Maanu x Annural Khalid</h3>
+                <audio src="music/Jhol.mp3" controls loop></audio>
+            </div>
+            <div class="song">
+                <h3>Labon Ko - KK | Pritam</h3>
+                <audio src="music/Labon Ko.mp3" controls loop></audio>
+            </div>
+            <div class="song">
+                <h3>Luther - Kendrick Lamar & SZA</h3>
+                <audio src="music/Luther.mp3" controls loop></audio>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>Top Albums</h2>
+        <div class="flex-container">
+            <div class="album">
+                <img src="images/Utopia.jpg" alt="Utopia Album Cover">
+            </div>
+            <div class="album">
+                <img src="images/ken1.jpg" alt="Kendrick Album">
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>More Songs</h2>
+        <div class="flex-container">
+            <div class="song">
+                <h3>Heartless - Kanye West</h3>
+                <audio src="music/Heartless.mp3" controls loop></audio>
+            </div>
+            <div class="song">
+                <h3>Timeless - Playboi Carti</h3>
+                <audio src="music/Timeless.mp3" controls loop></audio>
+            </div>
+            <div class="song">
+                <h3>No Role Modelz - J. Cole</h3>
+                <audio src="music/No Role Modelz.mp3" controls loop></audio>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>More Albums</h2>
+        <div class="flex-container">
+            <div class="album">
+                <img src="images/Graduation.jpg" alt="Graduation Album" height="300px" width="350px">
+            </div>
+            <div class="album">
+                <img src="images/Drake.jpg" alt="Drake Album">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>&copy; Musifier 2025</h2>
+    </footer>
+
+</body>
+</html>
